@@ -1,0 +1,62 @@
+# ZPTC / MPTC counting day: refresh live/rural.json from ETV Bharat's tracker every ~90 seconds, no AI model, no Supabase.
+# Runs only in the public site repo (vadarandom2-debug/apelectionresults-site). Each scheduled run loops for ~55 minutes;
+# the hourly schedule covers 7 Nov, 7:30 AM to 10:30 PM IST (01:00–17:00 UTC). "Run workflow" starts one by hand.
+name: live-rural
+on:
+  schedule:
+    - cron: "7 1-16 7 11 *"
+  workflow_dispatch:
+    inputs:
+      test:
+        description: "Only save live/ping.txt once, to check that the job's saves reach the site"
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: live-rural
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.repository == 'vadarandom2-debug/apelectionresults-site'
+    runs-on: ubuntu-latest
+    timeout-minutes: 62
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Test save
+        if: inputs.test
+        run: |
+          git config user.name "vadarandom2-debug"
+          git config user.email "263738643+vadarandom2-debug@users.noreply.github.com"
+          date -u +%FT%TZ > live/ping.txt && git add -f live/ping.txt && git commit -qm "Live ping" && git push -q origin HEAD:main
+      - name: Check ETV every 60 seconds for 57 minutes
+        if: ${{ !inputs.test }}
+        run: |
+          git config user.name "vadarandom2-debug"
+          git config user.email "263738643+vadarandom2-debug@users.noreply.github.com"
+          end=$(( $(date +%s) + 3420 )); last=0; pending=0
+          # GitHub Pages rebuilds the site on every push and allows about 10 builds an hour: read ETV every 90 seconds,
+          # but push when something changed, at most every ~3 minutes (170 s gap, checked every 60 s): faster pushes made GitHub cancel its own builds
+          while [ "$(date +%s)" -lt "$end" ]; do
+            if node .github/rural/live-rural.mjs ./logic.js | grep -q changed; then pending=1; fi
+            if [ "$pending" = 1 ] && [ $(( $(date +%s) - last )) -ge 170 ]; then
+              cp -r live /tmp/live-new
+              git fetch -q origin main && git reset -q --hard origin/main   # a site publish may have replaced the history
+              rm -rf live && cp -r /tmp/live-new live && rm -rf /tmp/live-new
+              git add -f live
+              if git commit -qm "Live ZPTC / MPTC $(date -u +%H:%MZ)"; then git push -q origin HEAD:main && last=$(date +%s); fi
+              pending=0
+            fi
+            sleep 60
+          done
+      - name: Start the next run (GitHub's scheduler is not reliable)
+        if: ${{ !inputs.test && always() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # keep going until 10:30 PM IST on 7 Nov (17:00 UTC)
+          if [ "$(date -u +%Y-%m-%dT%H)" \< "2026-11-07T17" ]; then gh workflow run live-rural.yml --ref main; fi

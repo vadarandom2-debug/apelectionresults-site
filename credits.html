@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Credits · AP Results</title>
+  <meta name="description" content="Data sources and image credits for apelectionresults.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+  <style>
+    .cr { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+    .cr h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 900; letter-spacing: -0.03em; margin: 14px 0 8px; }
+    .cr h2 { font-size: 19px; margin: 32px 0 8px; }
+    .cr p, .cr li { color: var(--ink2); font-size: 15px; } .cr li { margin-bottom: 6px; }
+    .cr a { color: var(--ink); }
+    .back { text-decoration: none; font-weight: 700; color: var(--ink); }
+  </style>
+</head>
+<body>
+  <main class="cr">
+    <a class="back" href="./">← AP Results</a>
+    <h1>Credits</h1>
+    <p>Developed by <b>Shivudu</b> · <a href="https://x.com/shiva4tdp" target="_blank" rel="noopener">@shiva4tdp</a>. An independent results tracker, not affiliated with the State Election Commission or any party.</p>
+
+    <h2>Data</h2>
+    <ul>
+      <li>2014, 2019 and 2024 Assembly and Lok Sabha results: Election Commission of India figures as tabulated on Wikipedia. 2014 covers the 175 seats of present-day Andhra Pradesh.</li>
+      <li>2026 local body schedule and list of bodies: State Election Commission, Andhra Pradesh, as reported by The Hans India, TV9 Telugu and mycorporator.in.</li>
+      <li>Candidates: party announcements as reported by NTV Telugu, Andhra Prabha, Andhra Jyothy and The Hans India.</li>
+      <li>Results are shown only as officially declared. Always check <a href="https://apsec.ap.gov.in" target="_blank" rel="noopener">apsec.ap.gov.in</a>.</li>
+    </ul>
+
+    <h2>Images</h2>
+    <p>Party flags, logos and election symbols are trademarks of their respective parties, shown for identification only. Photos and symbols come from <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a> under the licences below.</p>
+    <ul id="photoCredits"></ul>
+  </main>
+  <script src="data/parties.js?v=1"></script>
+  <script>
+    (function () {
+      var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+      var cr = window.AP_PHOTO_CREDITS || {};
+      document.getElementById("photoCredits").innerHTML = Object.keys(cr).map(function (k) {
+        var c = cr[k];
+        return '<li><a href="' + esc(c.page) + '" target="_blank" rel="noopener">' + esc(c.file.replace(/_/g, " ")) + "</a> · " + esc(c.author || "unknown") + " · " + esc(c.license) + "</li>";
+      }).join("");
+    })();
+  </script>
+</body>
+</html>

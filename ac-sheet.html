@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>నియోజకవర్గాల వారీ ఫలితాలు · AP ZPTC MPTC 2026</title>
+<meta name="description" content="All 175 assembly constituencies on one A3 / A4 sheet: ZPTC and MPTC seats won and leading, by Kutami, YSRCP and others." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600;700&family=Inter+Tight:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+:root { --u: 1mm; --K: #d4a000; --Y: #1d5fc4; --O: #8a93a6; --ink: #141a26; --mut: #6b7385; }
+* { box-sizing: border-box; margin: 0; }
+html { background: #e9e9e4; }
+body { font-family: "Anek Telugu", sans-serif; color: var(--ink); }
+.bar-tools { position: sticky; top: 0; z-index: 5; display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap; padding: 10px 12px; background: #fff; border-bottom: 1px solid #d8d8d0; font: 600 14px "Anek Telugu", sans-serif; }
+.bar-tools button { min-height: 38px; padding: 4px 16px; border: 1px solid #c9c9c0; border-radius: 9px; background: #f4f4ef; font: inherit; cursor: pointer; }
+.bar-tools button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.bar-tools .go { background: #0b7a4b; color: #fff; border-color: #0b7a4b; }
+.stage { padding: 14px 8px 30px; display: flex; justify-content: center; }
+
+/* the sheet: A3 portrait is 297 x 420 mm; A4 is the same layout at 0.7071 scale (--u) */
+.sheet { --e: calc(var(--u) * 2.5); font-size: var(--e); width: calc(var(--u) * 297); height: calc(var(--u) * 420); padding: calc(var(--u) * 8) calc(var(--u) * 7) calc(var(--u) * 6); background: #fff; overflow: hidden; position: relative; display: flex; flex-direction: column; line-height: 1.25; }
+.hd { display: flex; align-items: center; gap: 2.2em; padding-bottom: 1.4em; border-bottom: .25em solid var(--ink); }
+.hd img { width: 5.6em; height: 5.6em; }
+.hd h1 { font: 700 3.4em/1.1 "Anek Telugu", sans-serif; }
+.hd p { font-size: 1.15em; color: var(--mut); font-weight: 500; }
+.tot { margin-left: auto; display: flex; gap: 2.4em; }
+.tot div { min-width: 21em; }
+.tot b { display: block; font-size: 1.15em; font-weight: 700; margin-bottom: .25em; }
+.tot .n { font-size: 1.5em; font-weight: 700; font-variant-numeric: tabular-nums; }
+.lg { display: flex; gap: 1.6em; align-items: center; padding: .9em 0 .8em; font-size: 1.05em; color: var(--mut); font-weight: 500; flex-wrap: wrap; }
+.lg i { display: inline-block; width: 1.5em; height: .8em; border-radius: .2em; vertical-align: -.05em; margin-right: .35em; }
+.lg i.l { opacity: .45; }
+.cols { flex: 1; column-count: 4; column-gap: calc(var(--u) * 3.5); }
+.dist { break-inside: avoid; margin-bottom: 1.1em; }
+.dh, .r { display: grid; grid-template-columns: .35em .35em 6.8em 3.6em 3.1em 6.4em 4.2em; column-gap: .25em; align-items: center; }
+.dh { padding: .25em 0 .2em; margin-bottom: .25em; border-bottom: .12em solid var(--ink); }
+.dh b { grid-column: 1 / 4; font-size: 1.12em; font-weight: 700; }
+.r { height: 2.5em; border-bottom: .06em solid #ececE6; }
+.r .nm { font-weight: 600; font-size: 1em; white-space: nowrap; overflow: hidden; text-overflow: clip; }
+.st { align-self: stretch; margin: .3em 0; border-radius: .15em; }
+.bar { display: flex; height: .95em; background: #ecece6; border-radius: .2em; overflow: hidden; }
+.bar span { display: block; height: 100%; }
+.num { font-size: .92em; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; letter-spacing: -.01em; }
+.num u { text-decoration: none; } .num u.z { opacity: .3; }
+.dh .num { font-weight: 700; }
+.ft { display: flex; justify-content: space-between; align-items: center; padding-top: .9em; border-top: .15em solid var(--ink); font-size: 1.1em; font-weight: 600; }
+.ft .brand { display: flex; align-items: center; gap: .7em; } .ft img { width: 2.6em; height: 2.6em; }
+.ft span { color: var(--mut); font-weight: 500; }
+.msg { padding: 3em; text-align: center; color: var(--mut); font-size: 1.4em; grid-column: 1 / -1; }
+html.bare .bar-tools { display: none; } html.bare .stage { padding: 0; } html.bare, html.bare body { background: #fff; }
+</style>
+</head>
+<body>
+<div class="bar-tools"><span>ఒకే షీట్ · A3 ఇమేజ్</span><button type="button" class="go" id="save">⬇ A3 ఇమేజ్ డౌన్‌లోడ్ (PNG)</button><span id="saveMsg"></span></div>
+<div class="stage"><div class="fit" id="fit"><div class="sheet" id="sheet">
+  <div class="hd"><img src="assets/brand/apresults-icon.svg" alt="" />
+    <div><h1>నియోజకవర్గాల వారీ ఫలితాలు</h1><p>AP జడ్పీటీసీ · ఎంపీటీసీ ఎన్నికలు 2026 · 175 అసెంబ్లీ నియోజకవర్గాలు</p></div>
+    <div class="tot" id="tot"></div></div>
+  <div class="lg"><span><i style="background:var(--K)"></i>కూటమి</span><span><i style="background:var(--Y)"></i>వైసీపీ</span><span><i style="background:var(--O)"></i>ఇతరులు</span>
+    <span><i style="background:#555"></i>గెలుపు</span><span><i class="l" style="background:#555"></i>ఆధిక్యం</span>
+    <span>అంకెలు = గెలుపు + ఆధిక్యం (కూటమి·వైసీపీ·ఇతరులు)</span><span>ఎడమ గీతలు: 1వది జడ్పీటీసీ, 2వది ఎంపీటీసీ లో ముందున్న పక్షం</span>
+    <span style="margin-left:auto;font-weight:600;color:var(--ink)">జడ్పీటీసీ ▏ ఎంపీటీసీ</span></div>
+  <div class="cols" id="cols"><p class="msg">లోడ్ అవుతోంది…</p></div>
+  <div class="ft"><div class="brand"><img src="assets/brand/apresults-icon.svg" alt="" />apelectionresults.com</div><span>పరిషత్ ఎన్నికల ఫలితాలు · ప్రత్యక్షంగా</span></div>
+</div></div></div>
+<script src="data/mandals.js?v=20261107043500"></script>
+<script>
+(() => {
+  if (/[?&]bare\b/.test(location.search)) document.documentElement.classList.add("bare");
+  const $ = (s) => document.querySelector(s), ZP = window.AP_ZP, nf = (n) => Number(n || 0).toLocaleString("en-IN");
+  const KUT = ["TDP", "JSP", "BJP", "NDA"], side = (p) => (KUT.includes(p) ? "K" : p === "YSRCP" ? "Y" : "O");
+  const fold = (m) => { const o = { K: 0, Y: 0, O: 0 }; for (const [p, n] of Object.entries(m || {})) o[side(p)] += n; return o; };
+  // one kind of seat in one constituency (or district): won / leading per side, and who is ahead
+  const cell = (c) => { const w = fold(c.s), l = fold(c.l), a = { K: w.K + l.K, Y: w.Y + l.Y, O: w.O + l.O }; const top = ["K", "Y", "O"].sort((x, y) => a[y] - a[x]); return { t: c.t, w, l, a, lead: a[top[0]] === 0 ? null : a[top[0]] === a[top[1]] ? "=" : top[0] }; };
+  const add = (x, y) => { const o = { t: x.t + y.t, w: {}, l: {}, a: {} }; for (const k of ["K", "Y", "O"]) { o.w[k] = x.w[k] + y.w[k]; o.l[k] = x.l[k] + y.l[k]; o.a[k] = x.a[k] + y.a[k]; } return o; };
+  const zero = () => ({ t: 0, w: { K: 0, Y: 0, O: 0 }, l: { K: 0, Y: 0, O: 0 }, a: { K: 0, Y: 0, O: 0 } });
+  const bar = (c) => `<div class="bar">${["K", "Y", "O"].map((k) => [[c.w[k], 1], [c.l[k], .42]].map(([n, op]) => n ? `<span style="width:${(n / c.t) * 100}%;background:var(--${k});opacity:${op}"></span>` : "").join("")).join("")}</div>`;
+  const nums = (c) => `<span class="num">${["K", "Y", "O"].map((k) => `<u class="${c.a[k] ? "" : "z"}" style="color:var(--${k})">${c.a[k]}</u>`).join("·")}</span>`;
+  const stripe = (c) => `<i class="st" style="background:${c.lead && c.lead !== "=" ? `var(--${c.lead})` : "#e1e1da"}"></i>`;
+  let acs = null;
+  function draw() {
+    if (!acs) return;
+    const teBy = {}; for (const a of acs) if (a.te) teBy[a.en] = a.te; // a constituency whose ZPTC sits in another district borrows its Telugu name
+    const by = {}; for (const a of acs) (by[a.d] ||= []).push(a);
+    let Z = zero(), M = zero();
+    $("#cols").innerHTML = ZP.districts.filter(([id]) => by[id]).map(([id, , te]) => {
+      let dz = zero(), dm = zero();
+      const rows = by[id].map((a) => { const z = cell(a.z), m = cell(a.m); dz = add(dz, z); dm = add(dm, m);
+        return `<div class="r">${stripe(z)}${stripe(m)}<span class="nm">${a.te || teBy[a.en] || a.en}</span>${bar(z)}${nums(z)}${bar(m)}${nums(m)}</div>`; }).join("");
+      Z = add(Z, dz); M = add(M, dm);
+      return `<section class="dist"><div class="dh"><b>${te}</b>${bar(dz)}${nums(dz)}${bar(dm)}${nums(dm)}</div>${rows}</section>`;
+    }).join("");
+    const tot = (n, c) => `<div><b>${n} · ${nf(c.t)} స్థానాలు</b><span class="n">${["K", "Y", "O"].map((k) => `<u style="text-decoration:none;color:var(--${k})">${nf(c.a[k])}</u>`).join(" · ")}</span></div>`;
+    $("#tot").innerHTML = tot("జడ్పీటీసీ", Z) + tot("ఎంపీటీసీ", M);
+    fit();
+    // long names shrink to fit their cell instead of being cut
+    document.fonts.ready.then(() => { document.querySelectorAll(".nm").forEach((e) => { e.style.fontSize = ""; if (e.scrollWidth > e.clientWidth + 1) e.style.fontSize = Math.floor((e.clientWidth / e.scrollWidth) * 97) + "%"; }); });
+  }
+  async function load() {
+    try { const r = await fetch(`live/ac.json?t=${Math.floor(Date.now() / 60000)}`, { cache: "no-store" }); if (r.ok) { const j = await r.json(); if (j?.acs?.length) { acs = j.acs; try { localStorage.setItem("pz-ac", JSON.stringify(acs)); } catch {} draw(); return; } } } catch {}
+    if (!acs) { try { const a = JSON.parse(localStorage.getItem("pz-ac") || "null"); if (Array.isArray(a) && a.length) { acs = a; draw(); } } catch {} }
+    if (!acs) $("#cols").innerHTML = `<p class="msg">ఫలితాలు ఇంకా అందలేదు — కొద్దిసేపట్లో మళ్లీ ప్రయత్నించండి</p>`;
+  }
+  // on screen the sheet is scaled down to the window; printing uses its true size
+  function fit() {
+    const sh = $("#sheet"), box = $("#fit"); box.style.zoom = 1;
+    box.style.zoom = Math.min(1, (innerWidth - 16) / sh.offsetWidth);
+    const c = $("#cols"); if (c.scrollHeight > c.clientHeight + 2 || c.scrollWidth > c.clientWidth + 2) console.warn("constituency sheet overflows its page");
+  }
+  // the picture: the sheet itself drawn to a PNG at A3 proportions (297 x 420 mm), about 3000 x 4243 px
+  async function save() {
+    const btn = $("#save"), msg = $("#saveMsg"), box = $("#fit"), z = box.style.zoom; btn.disabled = true; msg.textContent = "ఇమేజ్ తయారవుతోంది…";
+    try {
+      if (!window.html2canvas) await new Promise((ok, no) => { const s = document.createElement("script"); s.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
+      await document.fonts.ready; box.style.zoom = 1; window.scrollTo(0, 0);
+      // the logo is an SVG without a fixed size, which the picture maker skips: draw it to a PNG first and swap it in for the capture
+      const imgs = [...document.querySelectorAll("#sheet img")], olds = imgs.map((i) => i.getAttribute("src"));
+      try {
+        const txt = (await (await fetch(olds[0])).text()).replace("<svg ", '<svg width="400" height="400" '), im = new Image();
+        im.src = URL.createObjectURL(new Blob([txt], { type: "image/svg+xml" })); await im.decode();
+        const c = document.createElement("canvas"); c.width = c.height = 400; c.getContext("2d").drawImage(im, 0, 0, 400, 400);
+        const png = c.toDataURL("image/png"); imgs.forEach((i) => (i.src = png)); await Promise.all(imgs.map((i) => i.decode().catch(() => {})));
+      } catch (e) { console.warn("logo:", e); }
+      const sh = $("#sheet"), cv = await window.html2canvas(sh, { scale: 3000 / sh.offsetWidth, backgroundColor: "#ffffff", useCORS: true, logging: false, windowWidth: Math.max(innerWidth, sh.offsetWidth + 40) });
+      const blob = await new Promise((r) => cv.toBlob(r, "image/png")), file = new File([blob], "ap-constituency-results-A3.png", { type: "image/png" });
+      if (/Android|iPhone|iPad/i.test(navigator.userAgent) && navigator.canShare?.({ files: [file] })) await navigator.share({ files: [file], title: "నియోజకవర్గాల వారీ ఫలితాలు" }).catch(() => {});
+      else { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file.name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); }
+      msg.textContent = "✓ సిద్ధం";
+    } catch (e) { msg.textContent = "ఇమేజ్ తయారు కాలేదు — మళ్లీ ప్రయత్నించండి"; console.error(e); }
+    document.querySelectorAll("#sheet img").forEach((i) => i.setAttribute("src", "assets/brand/apresults-icon.svg"));
+    box.style.zoom = z; fit(); btn.disabled = false; setTimeout(() => (msg.textContent = ""), 5000);
+  }
+  document.addEventListener("click", (e) => { if (e.target.closest("#save")) save(); });
+  addEventListener("resize", fit);
+  load(); setInterval(() => { if (!document.hidden) load(); }, 60000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="te">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>పరిషత్ ఫలితాలు · AP ZPTC MPTC Results 2026</title>
+  <script>/* fresh */(()=>{const B="20261107171654";if(B.charAt(0)==="_")return;const go=()=>fetch("build.txt?t="+Math.floor(Date.now()/60000),{cache:"no-store"}).then(r=>r.ok?r.text():"").then(t=>{t=t.trim();if(t&&t!==B){try{if(sessionStorage.getItem("rl")===t)return;sessionStorage.setItem("rl",t)}catch(e){return}location.reload()}}).catch(()=>{});go();document.addEventListener("visibilitychange",()=>{if(!document.hidden)go()})})();</script>
+  <meta name="description" content="Andhra Pradesh ZPTC and MPTC election results 2026: statewide, district by district and mandal by mandal, with result images to share." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://apelectionresults.com/parishad.html" />
+  <meta property="og:title" content="AP ZPTC MPTC Results 2026 Live · District &amp; Mandal Results" />
+  <meta property="og:description" content="Live ZPTC and MPTC results for Andhra Pradesh: statewide, district by district and mandal by mandal, with winners' names. Counting 7 November 2026." />
+  <meta property="og:image" content="https://apelectionresults.com/assets/brand/og-parishad.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://apelectionresults.com/assets/brand/og-parishad.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600;700&family=Inter+Tight:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="counting-simple.css?v=20261106050000" />
+  <link rel="stylesheet" href="parishad.css?v=20261107190500" />
+  <link rel="stylesheet" href="parishad-x.css?v=20261107130000" />
+</head>
+<body class="x">
+  <div id="demoBar" class="demo" hidden><b>డెమో · నిజమైన ఫలితాలు కావు</b><input id="demoP" type="range" min="0" max="100" value="60" aria-label="Counting stage" /><span id="demoV">60%</span><a href="parishad.html">Exit</a></div>
+  <main class="wrap">
+    <p class="crumb"><a href="./#/overview">apelectionresults.com</a> <button class="live-btn" id="state" type="button" aria-label="Refresh live results"><i></i><span id="stateT">LIVE</span></button></p>
+    <h1>పరిషత్ ఎన్నికల ఫలితాలు <small>జడ్పీటీసీ · ఎంపీటీసీ 2026</small></h1>
+    <p class="pz-sub">28 జిల్లా పరిషత్‌లు · 663 మండలాలు · 659 జడ్పీటీసీ · 9,829 ఎంపీటీసీ స్థానాలు</p>
+
+    <div class="cd" id="cd" hidden role="timer"></div>
+    <p class="livebar" id="live" role="status"></p>
+
+    <section class="xt-wrap" id="xTug" aria-label="Kutami vs YSRCP"></section>
+    <div class="xk" id="xTick" hidden><span class="xk-l">తాజా</span><div class="xk-v"><div class="xk-in"></div></div></div>
+    <section class="xm" aria-label="Seat mosaic">
+      <div class="xm-h"><div><h2>రాష్ట్రమంతా ఒక్క చూపులో</h2><p>ప్రతి చుక్క ఒక స్థానం · ప్రతి గడి ఒక జిల్లా, మ్యాప్‌లో ఉన్నచోటే · గడిని నొక్కితే మండలాల ఫలితాలు</p></div>
+        <div class="pz-seg xm-seg" role="group" aria-label="Seat type"><button type="button" data-xk="zptc" aria-pressed="true">జడ్పీటీసీ</button><button type="button" data-xk="mptc" aria-pressed="false">ఎంపీటీసీ</button></div></div>
+      <div class="xm-box xm-grid" id="xMap" aria-label="Every seat as a dot, district by district, laid out like the map"></div>
+      <p class="xm-key"><span style="--c:#d4a000">కూటమి</span><span style="--c:#1d5fc4">వైసీపీ</span><span style="--c:#8a93a6">ఇతరులు</span><span class="l">లేత = ఆధిక్యం</span><span style="--c:#3b4a66">తేలాల్సినవి</span></p>
+    </section>
+    <div id="xRace"></div>
+    <section class="pz-score" id="score" aria-label="Statewide"></section>
+    <div class="chips"><button type="button" data-share="state">📷 రాష్ట్ర ఫలితాలు</button><button type="button" data-share="districts">📷 జిల్లాల వారీ</button><button type="button" data-jump="acHead">🏛 నియోజకవర్గాల వారీ</button><button type="button" data-open="ac-sheet.html">🖼 ఒకే షీట్ ఇమేజ్ (A3)</button></div>
+
+    <h2>పార్టీల వారీ <small>రాష్ట్రం మొత్తం</small></h2>
+    <table class="tot pz-party"><thead><tr><th>పార్టీ</th><th>జడ్పీటీసీ</th><th>ఎంపీటీసీ</th></tr></thead><tbody id="party"></tbody></table>
+    <p class="note uo" id="uoNote"></p>
+
+    <h2 id="dHead">జిల్లాల వారీ ఫలితాలు <small>జడ్పీటీసీ / ఎంపీటీసీ ఎంచుకుని, జిల్లాను నొక్కండి</small></h2>
+    <div class="pz-tools">
+      <div class="pz-seg" role="group" aria-label="Seat type"><button type="button" data-k="zptc" aria-pressed="true">జడ్పీటీసీ</button><button type="button" data-k="mptc" aria-pressed="false">ఎంపీటీసీ</button></div>
+      <input id="q" type="search" placeholder="జిల్లా / మండలం వెతకండి · Search" aria-label="Search district or mandal" />
+    </div>
+    <div class="pz-tiles" id="tiles"></div>
+    <div id="dists"></div>
+
+    <h2 id="acHead">నియోజకవర్గాల వారీ ఫలితాలు <small>అసెంబ్లీ నియోజకవర్గం · పైన జడ్పీటీసీ / ఎంపీటీసీ ఎంచుకోండి</small></h2>
+    <div id="acs"></div>
+
+    <article class="rcard" id="rpoll"></article>
+  </main>
+
+  <script src="data/bodies.js?v=20261103081429"></script>
+  <script src="data/telugu.js?v=20261103081429"></script>
+  <script src="data/unopposed.js?v=20261103081429"></script>
+  <script src="data/turnout.js?v=20261107124500"></script>
+  <script src="data/mandals.js?v=20261107043500"></script>
+  <script src="supabase-config.js?v=20261103081429"></script>
+  <script src="parishad.js?v=20261107200500"></script>
+  <script src="parishad-share.js?v=20261107123000"></script>
+  <script src="parishad-x.js?v=20261107140000"></script>
+</body>
+</html>
