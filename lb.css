@@ -1,0 +1,49 @@
+/* Local Bodies, Overview and Live (upcoming) tabs: tables and numbers only, no charts. */
+.lb { padding-top: 28px; padding-bottom: 70px; }
+.lb-top { margin-bottom: 18px; } .lb-top h2 { font-size: clamp(24px, 3.4vw, 34px); line-height: 1.2; font-weight: 800; font-family: "Anek Telugu", "Inter Tight", sans-serif; }
+.lb-en { display: block; font: 600 15px "Inter Tight", sans-serif; color: var(--ink2); margin-top: 3px; letter-spacing: 0; } .lb-top .muted { margin: 8px 0 0; max-width: 70ch; }
+.lb-top a, .lb a { color: var(--YSRCP); }
+.lb-h { font: 800 18px "Anek Telugu", "Inter Tight", sans-serif; margin: 26px 0 10px; } .lb-h small { font-weight: 500; font-size: 13px; color: var(--ink2); margin-left: 6px; }
+.lb-tabs { display: flex; gap: 6px; margin: 4px 0 14px; flex-wrap: wrap; } .lb-tabs button, .lb-seg button { min-height: 42px; padding: 6px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg2); font: 700 15px "Anek Telugu", "Inter Tight", sans-serif; color: var(--ink2); cursor: pointer; }
+.lb-tabs button small { font: 600 12px "Inter Tight", sans-serif; opacity: .8; margin-left: 4px; } .lb-tabs [aria-selected="true"], .lb-seg [aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.lb-seg { display: flex; gap: 6px; margin: 12px 0; flex-wrap: wrap; } .lb-seg button { min-height: 38px; font-size: 14px; }
+.lb-sumstrip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 8px 0; } .lb-sumstrip div { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px; }
+.lb-sumstrip small { display: block; font: 600 12.5px "Anek Telugu", "Inter Tight", sans-serif; color: var(--ink2); } .lb-sumstrip b { font: 800 26px/1.15 "Inter Tight", sans-serif; font-variant-numeric: tabular-nums; } .lb-sumstrip i { display: block; font: 500 11.5px "Anek Telugu", sans-serif; font-style: normal; color: var(--ink2); }
+@media (max-width: 640px) { .lb-sumstrip { grid-template-columns: repeat(2, 1fr); } }
+.lb-list { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--card); }
+.lb-row { display: grid; grid-template-columns: var(--cols); gap: 6px; align-items: center; padding: 9px 12px; border-bottom: 1px solid var(--line); min-width: 0; } .lb-row:last-child { border-bottom: 0; }
+.lb-hd { background: var(--bg2); font: 700 12px "Anek Telugu", "Inter Tight", sans-serif; color: var(--ink2); padding-top: 8px; padding-bottom: 8px; } .lb-ph { text-align: center; font-weight: 800; } .lb-hd .lb-tot { color: var(--ink2); font-weight: 700; }
+.lb-sum { background: var(--bg2); font-weight: 800; }
+.lb-name { min-width: 0; line-height: 1.25; } .lb-name b { display: block; font: 700 15px "Anek Telugu", "Inter Tight", sans-serif; overflow-wrap: anywhere; } .lb-name small { display: block; font: 500 11.5px "Inter Tight", sans-serif; color: var(--ink2); }
+.lb-n5 { text-align: center; font: 800 15px "Inter Tight", sans-serif; font-variant-numeric: tabular-nums; } .lb-n5.z { opacity: .28; font-weight: 600; }
+.lb-tot { text-align: center; font: 800 14px "Inter Tight", sans-serif; font-variant-numeric: tabular-nums; } .lb-tot small { font-weight: 500; color: var(--ink2); font-size: 11px; } .lb-tot.ok { color: #0b7a4b; font-family: "Anek Telugu", sans-serif; font-size: 13px; } .lb-tot.wait { color: #b45309; font-family: "Anek Telugu", sans-serif; font-size: 13px; }
+.lb-dn { font: 500 12.5px "Anek Telugu", sans-serif; color: var(--ink2); }
+.lb-c3 { text-align: center; } .lb-trio { font: 800 14px "Inter Tight", sans-serif; font-variant-numeric: tabular-nums; white-space: nowrap; } .lb-hd .lb-c3 small { font-weight: 500; }
+details.lb-d > summary { cursor: pointer; list-style: none; } details.lb-d > summary::-webkit-details-marker { display: none; } details.lb-d > summary::before { content: none; }
+details.lb-d { border-bottom: 1px solid var(--line); } details.lb-d:last-child { border-bottom: 0; } details.lb-d > summary.lb-row { border-bottom: 0; } details.lb-d[open] > summary { background: #f4f7ff; }
+details.lb-d > summary .lb-name b::before { content: "▸ "; color: var(--ink2); font-weight: 600; } details.lb-d[open] > summary .lb-name b::before { content: "▾ "; }
+.lb-scroll { overflow-x: auto; padding: 4px 12px 12px; background: #fcfcfa; }
+.lb-tbl { width: 100%; border-collapse: collapse; font-size: 14px; } .lb-tbl th { text-align: left; font: 700 11.5px "Anek Telugu", "Inter Tight", sans-serif; color: var(--ink2); padding: 7px 8px; border-bottom: 1.5px solid var(--ink); white-space: nowrap; }
+.lb-tbl td { padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; font-family: "Anek Telugu", "Inter Tight", sans-serif; } .lb-tbl td b { font-weight: 700; } .lb-tbl td small { display: block; color: var(--ink2); font: 500 11.5px "Inter Tight", sans-serif; }
+.lb-tbl td.num, .lb-tbl th.num { text-align: center; font: 700 14px "Inter Tight", sans-serif; font-variant-numeric: tabular-nums; } .lb-tbl td.num.z { opacity: .28; } .lb-tbl td.num small { display: inline; font-size: 11px; }
+.lb-chip { display: inline-block; padding: 1px 9px; border-radius: 99px; background: color-mix(in srgb, var(--c) 16%, #fff); color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 45%, #fff); font: 700 12.5px "Anek Telugu", sans-serif; white-space: nowrap; }
+.lb-wait { color: #b45309; font: 600 12.5px "Anek Telugu", sans-serif; } .lb-uo { font: 700 11px "Anek Telugu", sans-serif; background: #eef1f7; color: #3b4a66; padding: 1px 7px; border-radius: 6px; }
+.lb-find { margin: 6px 0 10px; } .lb-find input { width: 100%; max-width: 460px; min-height: 42px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 12px; font: 500 15px "Anek Telugu", "Inter Tight", sans-serif; background: #fff; }
+.lb-empty { padding: 18px; text-align: center; color: var(--ink2); }
+/* upcoming (live tab) */
+.up-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; } @media (max-width: 860px) { .up-grid { grid-template-columns: 1fr; } }
+.up-card { border: 1.5px solid var(--line); border-radius: 18px; padding: 16px 18px; background: #fff; box-shadow: var(--shadow); } .up-card.now { border-color: #0b7a4b; background: #f3fbf6; } .up-card.soon { border-color: #e1c25a; background: #fffaf0; } .up-card.done { opacity: .7; }
+.up-n { font: 700 14px "Anek Telugu", sans-serif; color: var(--ink2); } .up-n b { font: 800 30px "Inter Tight", sans-serif; color: var(--ink); margin: 0 4px; } .up-n small { font: 600 12px "Inter Tight", sans-serif; }
+.up-poll { margin: 6px 0 10px; } .up-poll small { display: block; font: 600 12px "Anek Telugu", sans-serif; color: var(--ink2); } .up-poll b { display: block; font: 800 26px "Inter Tight", sans-serif; line-height: 1.15; } .up-poll span { font: 600 13.5px "Anek Telugu", "Inter Tight", sans-serif; color: #b45309; }
+.up-dl { display: grid; gap: 5px; margin: 0 0 10px; } .up-dl div { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dashed var(--line); padding-bottom: 4px; } .up-dl dt { font: 500 12.5px "Anek Telugu", sans-serif; color: var(--ink2); } .up-dl dd { margin: 0; font: 700 13.5px "Inter Tight", sans-serif; }
+.up-stage { margin: 0 0 6px; font: 700 13.5px "Anek Telugu", "Inter Tight", sans-serif; } .up-res { margin: 0; font: 500 12px "Anek Telugu", sans-serif; color: var(--ink2); }
+
+@media (max-width: 560px) {
+  .lb-row { gap: 3px; padding: 8px 8px; } .lb-n5 { font-size: 13px; } .lb-tot { font-size: 12.5px; } .lb-name b { font-size: 13.5px; } .lb-ph { font-size: 11px; } .lb-hd { font-size: 10.5px; }
+  .lb-trio { font-size: 11px; letter-spacing: -.3px; } .lb-tabs button { padding: 6px 12px; font-size: 14px; } .lb-sumstrip b { font-size: 22px; } .lb-dn { font-size: 11px; }
+}
+@media (max-width: 560px) {
+  .lb-a .lb-row { grid-template-columns: repeat(6, minmax(0, 1fr)) !important; row-gap: 4px; } .lb-a .lb-name { grid-column: 1 / -1; } .lb-a .lb-hd > span:first-child { display: none; }
+  .lb-a .lb-tot.ok, .lb-a .lb-tot.wait { font-size: 9.5px; line-height: 1.15; white-space: normal; overflow-wrap: anywhere; } .lb-a .lb-hd > span { font-size: 10px; }
+}
+.lb-none { background: #fafaf7; } .lb-none .lb-name b { color: var(--ink2); font-weight: 600; } .lb-note { margin: 10px 4px 0; font: 500 12.5px/1.5 "Anek Telugu", "Inter Tight", sans-serif; color: var(--ink2); }

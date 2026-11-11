@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Results Admin</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;600&family=Ramabhadra&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20261022200544" />
+  <link rel="stylesheet" href="admin.css?v=20261022131341" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 55 55'><polygon points='30.00,0.60 35.54,3.80 35.54,10.20 30.00,13.40 24.46,10.20 24.46,3.80' fill='%23111827'/><polygon points='41.60,0.60 47.14,3.80 47.14,10.20 41.60,13.40 36.06,10.20 36.06,3.80' fill='%23111827'/><polygon points='24.20,10.60 29.74,13.80 29.74,20.20 24.20,23.40 18.66,20.20 18.66,13.80' fill='%23111827'/><polygon points='35.80,10.60 41.34,13.80 41.34,20.20 35.80,23.40 30.26,20.20 30.26,13.80' fill='%23111827'/><polygon points='47.40,10.60 52.94,13.80 52.94,20.20 47.40,23.40 41.86,20.20 41.86,13.80' fill='%23111827'/><polygon points='18.40,20.60 23.94,23.80 23.94,30.20 18.40,33.40 12.86,30.20 12.86,23.80' fill='%23111827'/><polygon points='30.00,20.60 35.54,23.80 35.54,30.20 30.00,33.40 24.46,30.20 24.46,23.80' fill='%23F5C400'/><polygon points='41.60,20.60 47.14,23.80 47.14,30.20 41.60,33.40 36.06,30.20 36.06,23.80' fill='%23111827'/><polygon points='12.60,30.60 18.14,33.80 18.14,40.20 12.60,43.40 7.06,40.20 7.06,33.80' fill='%23111827'/><polygon points='24.20,30.60 29.74,33.80 29.74,40.20 24.20,43.40 18.66,40.20 18.66,33.80' fill='%23111827'/><polygon points='35.80,30.60 41.34,33.80 41.34,40.20 35.80,43.40 30.26,40.20 30.26,33.80' fill='%23111827'/><polygon points='6.80,40.60 12.34,43.80 12.34,50.20 6.80,53.40 1.26,50.20 1.26,43.80' fill='%23111827'/><polygon points='18.40,40.60 23.94,43.80 23.94,50.20 18.40,53.40 12.86,50.20 12.86,43.80' fill='%23111827'/></svg>" />
+</head>
+<body class="admin">
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="./">
+        <svg viewBox="0 0 55 55" aria-hidden="true" class="hexlogo"><polygon points="30.00,0.60 35.54,3.80 35.54,10.20 30.00,13.40 24.46,10.20 24.46,3.80" class="hk"/><polygon points="41.60,0.60 47.14,3.80 47.14,10.20 41.60,13.40 36.06,10.20 36.06,3.80" class="hk"/><polygon points="24.20,10.60 29.74,13.80 29.74,20.20 24.20,23.40 18.66,20.20 18.66,13.80" class="hk"/><polygon points="35.80,10.60 41.34,13.80 41.34,20.20 35.80,23.40 30.26,20.20 30.26,13.80" class="hk"/><polygon points="47.40,10.60 52.94,13.80 52.94,20.20 47.40,23.40 41.86,20.20 41.86,13.80" class="hk"/><polygon points="18.40,20.60 23.94,23.80 23.94,30.20 18.40,33.40 12.86,30.20 12.86,23.80" class="hk"/><polygon points="30.00,20.60 35.54,23.80 35.54,30.20 30.00,33.40 24.46,30.20 24.46,23.80" class="hg"/><polygon points="41.60,20.60 47.14,23.80 47.14,30.20 41.60,33.40 36.06,30.20 36.06,23.80" class="hk"/><polygon points="12.60,30.60 18.14,33.80 18.14,40.20 12.60,43.40 7.06,40.20 7.06,33.80" class="hk"/><polygon points="24.20,30.60 29.74,33.80 29.74,40.20 24.20,43.40 18.66,40.20 18.66,33.80" class="hk"/><polygon points="35.80,30.60 41.34,33.80 41.34,40.20 35.80,43.40 30.26,40.20 30.26,33.80" class="hk"/><polygon points="6.80,40.60 12.34,43.80 12.34,50.20 6.80,53.40 1.26,50.20 1.26,43.80" class="hk"/><polygon points="18.40,40.60 23.94,43.80 23.94,50.20 18.40,53.40 12.86,50.20 12.86,43.80" class="hk"/></svg>
+        <span><b>AP<i style="color:#C99A00;font-style:normal">·</i>results admin</b><small>Local body elections 2026</small></span>
+      </a>
+      <span class="conn" id="conn">Checking server…</span>
+    </div>
+    <div class="wrap"><nav class="tabs" aria-label="Admin sections">
+      <a href="#urban" data-atab="urban" aria-current="page">Enter results</a><a href="#upload" data-atab="upload">Upload file</a><a href="#rural" data-atab="rural">Rural &amp; turnout</a><a href="#cands" data-atab="cands">Candidates</a><a href="#news" data-atab="news">News</a><a href="#share" data-atab="share">Share image</a><a href="#post" data-atab="post">Post maker</a><a href="#reel" data-atab="reel">Reel → X</a><a href="#agent" data-atab="agent">AI agent</a>
+    </nav></div>
+  </header>
+
+  <div class="pubbar"><div class="wrap pub-in">
+    <span id="dirty" class="dirty">No unpublished changes</span>
+    <span class="mut small" id="lastPub"></span>
+    <div class="pub-btns">
+      <button class="btn ghost sm" id="dlJs" type="button">Download results.js</button>
+      <button class="btn sm" id="publish" type="button">Publish to site</button>
+    </div>
+  </div></div>
+
+  <main class="wrap amain">
+    <section data-apanel="urban">
+      <div class="ed-grid">
+        <aside class="blist">
+          <input type="search" id="bq" placeholder="Find body…" aria-label="Find body" />
+          <div class="chips" id="bfilter"></div>
+          <ul id="bodies"></ul>
+        </aside>
+        <div class="card editor" id="editor"></div>
+      </div>
+    </section>
+
+    <section data-apanel="upload" hidden>
+      <div class="card">
+        <h3>Upload a results file</h3>
+        <p class="mut small">CSV (one row per body) or JSON (a full results object or a results.js file). Nothing is published until you check the preview and press <b>Publish to site</b>.</p>
+        <div class="up-row">
+          <label class="drop" id="drop"><input type="file" id="file" accept=".csv,.json,.js,text/csv,application/json" /><b>Choose a file</b> or drop it here</label>
+          <div class="up-help">
+            <button class="btn ghost sm" id="tpl" type="button">Download CSV template</button>
+            <p class="mut small">The template lists all 100 bodies. Fill the party columns with <b>wards won</b>, the <b>lead_</b> columns with wards still leading, and the <b>head_</b> columns for the Mayor / Chairperson. Leave a row blank to skip it. Parties: TDP, JSP, BJP, YSRCP, INC, LEFT, OTH.</p>
+          </div>
+        </div>
+        <div id="preview"></div>
+      </div>
+    </section>
+
+    <section data-apanel="cands" hidden><div id="candsPanel"><div class="card"><p class="mut">Loading…</p></div></div></section>
+    <section data-apanel="news" hidden><div id="newsPanel"><div class="card"><p class="mut">Loading…</p></div></div></section>
+
+    <section data-apanel="agent" hidden><div id="agentMission"></div><div id="agentPanel"><div class="card"><p class="mut">Loading…</p></div></div></section>
+
+    <section data-apanel="post" hidden>
+      <div class="share-grid pm-grid">
+        <div class="card share-ctl pm-ctl">
+          <h3>Post maker <small class="mut">· news &amp; breaking cards</small></h3>
+          <label class="fld grow">Headline <small class="mut">(up to 1,000 characters)</small> <textarea id="pmHead" rows="3" maxlength="1000" placeholder="తెలుగు లేదా English లో శీర్షిక…"></textarea></label>
+          <label class="fld grow">News text <small class="mut">(optional · up to 1,00,000 characters — it shrinks to fit; very long text is cut with “…”)</small> <textarea id="pmSub" rows="8" maxlength="100000" placeholder="వార్త వివరాలు… / Full news text…"></textarea></label>
+          <label class="fld grow">Label <small class="mut">(optional · e.g. బ్రేకింగ్, LIVE, UPDATE)</small> <input id="pmKick" maxlength="30" /></label>
+          <div class="pm-photo"><label class="drop" id="pmDrop"><input type="file" id="pmFile" accept="image/*" /><b>Add a photo</b> <span class="mut small">· choose, drop or paste (optional)</span></label>
+            <p class="mut small"><span id="pmPhotoState">No photo — templates use a design background</span> <button type="button" class="btn ghost sm" id="pmNoPhoto" hidden>Remove photo</button></p></div>
+          <p class="pm-h">Size</p><div class="pm-sizes" id="pmSizes"></div>
+          <p class="pm-h">Logos</p>
+          <div class="pm-logos"><label class="demo-sw jai-sw"><input type="checkbox" id="pmShiva" checked /> <img src="assets/brand/shiva4tdp-avatar.jpg" alt="" class="round" /> <span>@shiva4tdp</span></label>
+            <label class="demo-sw jai-sw"><input type="checkbox" id="pmSite" checked /> <img src="assets/brand/apresults-icon.svg" alt="" /> <span>apelectionresults.com</span></label>
+            <label class="demo-sw jai-sw"><input type="checkbox" id="pmTdp" /> <img src="assets/parties/tdp.png" alt="" /> <span>Telugu Desam</span></label></div>
+          <div class="pm-btns"><button class="btn sm" id="pmShare" type="button">Share… (phone)</button><button class="btn sm" id="pmDl" type="button">Download</button><button class="btn ghost sm" id="pmCopy" type="button">Copy image</button></div>
+          <div class="pm-btns"><button class="btn ghost sm" id="pmX" type="button">Post on X →</button><button class="btn ghost sm" id="pmFb" type="button">Facebook →</button><button class="btn ghost sm" id="pmWa" type="button">WhatsApp →</button></div>
+          <label class="fld grow">Caption <textarea id="pmCaption" rows="4"></textarea></label>
+          <div class="pm-btns"><button class="btn ghost sm" id="pmCapCopy" type="button">Copy caption</button><button class="btn ghost sm" id="pmClear" type="button">Clear text</button></div>
+          <p class="mut small">X, Facebook and WhatsApp can't attach an image from a link: on a phone use <b>Share…</b>; on a computer download or copy the image, then add it to the post.</p>
+        </div>
+        <div class="pm-right">
+          <div class="share-prev"><canvas id="pmCanvas" aria-label="Post preview"></canvas></div>
+          <p class="pm-h">Templates <small class="mut">· 20</small></p><div class="pm-tpls" id="pmTpls"></div>
+          <p class="pm-h">Fonts <small class="mut">· 20</small></p><div class="font-pick pm-fonts" id="pmFonts"></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-apanel="reel" hidden>
+      <div class="share-grid rl-grid">
+        <div class="card share-ctl">
+          <h3>Instagram reel → X</h3>
+          <ol class="rl-steps mut small"><li>Save the reel to your phone: in Instagram tap <b>Share (✈︎) → Download</b>, or for your own reels <b>⋯ → Download</b>. It goes to your gallery.</li><li>Paste the reel link and its caption below, and add the saved video.</li><li>Press <b>Share to X</b>: the video and caption open in the X app.</li></ol>
+          <label class="fld grow">Reel link <input id="rlUrl" type="url" placeholder="https://www.instagram.com/reel/…" /></label>
+          <p id="rlUrlOk" class="small mut"></p>
+          <div class="pm-btns"><button class="btn ghost sm" id="rlPasteUrl" type="button">Paste link</button></div>
+          <label class="fld grow">Caption <small class="mut">(paste what you copied)</small> <textarea id="rlCap" rows="6" maxlength="100000"></textarea></label>
+          <div class="pm-btns"><button class="btn ghost sm" id="rlPasteCap" type="button">Paste caption</button></div>
+          <label class="demo-sw"><input type="checkbox" id="rlCredit" checked /> <span>Credit the creator <small>(“🎥 @handle via Instagram”)</small></span></label>
+          <label class="demo-sw"><input type="checkbox" id="rlTags" checked /> <span>Add #APElections @shiva4tdp</span></label>
+          <p class="mut small">The video is never downloaded from Instagram by the site and never uploaded to our server — it stays on your device. Only repost reels you own or have permission to share.</p>
+        </div>
+        <div class="rl-right">
+          <label class="drop rl-drop" id="rlDrop"><input type="file" id="rlFile" accept="video/*" /><b>Add the saved reel video</b> <span class="mut small">· choose or drop · <span id="rlFileInfo">No video yet</span></span></label>
+          <video id="rlVideo" controls playsinline hidden></video>
+          <label class="fld grow">Post text for X <span id="rlCount" class="rl-count"></span> <textarea id="rlOut" rows="7"></textarea></label>
+          <div class="pm-btns"><button class="btn sm" id="rlShare" type="button">Share to X (phone)</button><button class="btn ghost sm" id="rlX" type="button">Open X post →</button><button class="btn ghost sm" id="rlCopy" type="button">Copy text</button></div>
+          <div class="pm-btns"><button class="btn ghost sm" id="rlFull" type="button" hidden>Use full caption (X Premium)</button><button class="btn ghost sm" id="rlClear" type="button">Clear</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-apanel="share" hidden>
+      <div class="share-grid">
+        <div class="card share-ctl">
+          <h3>Share a seat result</h3>
+          <div class="smode" role="group" aria-label="What to share"><button type="button" data-smode="state" aria-pressed="false">★ Overall results</button><button type="button" data-smode="seat" aria-pressed="true">One seat</button></div>
+          <label class="fld">Seat <select id="shareBody"></select></label>
+          <label class="fld">Language <select id="shareLang"><option value="te">తెలుగు</option><option value="en">English</option></select></label>
+          <div class="font-pick" id="fontPick" role="group" aria-label="Telugu font"></div>
+          <div class="tpl-pick" role="group" aria-label="Template">
+            <button type="button" data-tpl="versus" aria-pressed="true"><i class="tp tp-vs"></i>Face-off</button>
+            <button type="button" data-tpl="breaking" aria-pressed="false"><i class="tp tp-br"></i>Breaking</button>
+            <button type="button" data-tpl="map" aria-pressed="false"><i class="tp tp-map"></i>State map</button>
+            <button type="button" data-tpl="victory" aria-pressed="false"><i class="tp tp-vic"></i>Celebration</button>
+            <button type="button" data-tpl="scoreboard" aria-pressed="false"><i class="tp tp-led"></i>LED scoreboard</button>
+            <button type="button" data-tpl="frontpage" aria-pressed="false"><i class="tp tp-np"></i>Front page</button>
+            <button type="button" data-tpl="mosaic" aria-pressed="false"><i class="tp tp-mo"></i>Ward mosaic</button>
+            <button type="button" data-tpl="classic" aria-pressed="false"><i class="tp tp-cl"></i>Classic</button>
+          </div>
+          <label class="fld">Format <select id="shareFmt"><option value="wide">X / Twitter post · 1200×675</option><option value="square">Square · 1080×1080</option><option value="story">Story / WhatsApp status · 1080×1920</option></select></label>
+          <label class="demo-sw jai-sw"><input type="checkbox" id="shareShiva" checked /> <img src="assets/brand/shiva4tdp-avatar.jpg" alt="" class="round" /> <span>@shiva4tdp logo</span></label>
+          <label class="demo-sw jai-sw"><input type="checkbox" id="shareTdp" checked /> <img src="assets/parties/tdp.png" alt="" /> <span>Telugu Desam logo</span></label>
+          <label class="demo-sw"><input type="checkbox" id="shareDemo" /> <span>Demo data <small>(simulated, watermarked)</small></span></label>
+          <p class="mut small" id="shareNote"></p>
+          <div class="share-btns"><button class="btn sm" id="shareDl" type="button">Download PNG</button><button class="btn ghost sm" id="shareCopy" type="button">Copy image</button></div>
+          <label class="fld grow">Caption <textarea id="shareCaption" rows="5"></textarea></label>
+          <div class="share-btns"><button class="btn ghost sm" id="shareCopyTxt" type="button">Copy caption</button><button class="btn ghost sm" id="shareX" type="button">Open X post →</button></div>
+          <p class="mut small">X can't attach an image from a link: download or copy the image, then add it to the post.</p>
+          <div class="brand-prev"><img src="assets/brand/shiva4tdp-avatar.jpg" alt="@shiva4tdp" class="brand-av" /><span><b>@shiva4tdp</b><br /><span class="mut small">Your X profile picture is used as the logo on every image.</span></span></div>
+        </div>
+        <div class="share-prev"><canvas id="shareCanvas" aria-label="Share image preview"></canvas></div>
+      </div>
+    </section>
+
+    <section data-apanel="rural" hidden>
+      <div class="card">
+        <h3>Statewide urban turnout</h3>
+        <label class="fld">Turnout % <input type="number" id="stTurnout" min="0" max="100" step="0.01" /></label>
+      </div>
+      <div class="rural-ed" id="ruralEd"></div>
+    </section>
+  </main>
+
+  <dialog id="loginDlg" class="login-dlg">
+    <form id="loginForm" method="dialog">
+      <h3>Sign in to publish</h3>
+      <p class="mut small">Use your admin email and password.</p>
+      <label class="fld grow">Email <input type="email" name="email" required autocomplete="username" /></label>
+      <label class="fld grow">Password <input type="password" name="password" required autocomplete="current-password" /></label>
+      <p class="errs" id="loginErr"></p>
+      <div class="ed-btns"><button class="btn sm" type="submit">Sign in</button><button class="btn ghost sm" type="button" onclick="this.closest('dialog').close()">Cancel</button></div>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="data/bodies.js?v=20261028231253"></script>
+  <script src="data/candidates.js?v=20261031215304"></script>
+  <script src="data/unopposed.js"></script>
+  <script src="charts.js?v=20261017124226"></script>
+  <script src="supabase-config.js?v=20261017124226"></script>
+  <script src="api/config.js"></script>
+  <script src="data/news.js?v=20261031215304"></script>
+  <script src="admin-supabase.js?v=20261017141310"></script>
+  <script src="admin.js?v=20261103053256"></script>
+  <script src="admin-agent.js?v=20261103053256"></script>
+  <script src="admin-agent-run.js?v=20261103053256"></script>
+  <script src="data/telugu.js?v=20261103053256"></script>
+  <script src="data/general.js?v=20261017124226"></script>
+  <script src="share-templates.js?v=20261017224210"></script>
+  <script src="share-templates2.js?v=20261022200544"></script>
+  <script src="post-templates.js?v=20261022013959"></script>
+  <script src="admin-post.js?v=20261022013959"></script>
+  <script src="admin-reel.js?v=20261022132230"></script>
+  <script src="share.js?v=20261103053256"></script>
+</body>
+</html>

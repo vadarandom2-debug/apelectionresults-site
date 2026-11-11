@@ -1,0 +1,14 @@
+// Election status override. When `paused` is set, the site shows an alert and stops the polling countdown.
+// Update from official SEC orders only.
+window.AP_STATUS = {
+  paused: false,
+  notice: true, // show the alert banner without pausing the countdown
+  since: "2026-11-02T21:00:00+05:30",
+  pill: "Counting tomorrow",
+  title: "Counting from 8 AM on 3 Nov · final turnout 60.96% · MPTC/ZPTC polling 5 Nov",
+  te: "3 నవంబర్ ఉదయం 8 నుంచి లెక్కింపు · తుది పోలింగ్ 60.96% · ఎంపీటీసీ, జడ్పీటీసీ పోలింగ్ నవంబర్ 5",
+  text: "Counting starts at 8 AM on Tuesday, 3 November, at 138 centres: postal ballots first, then ward votes, then the Chairperson / Mayor votes. Final turnout was 60.96% (SEC). Re-polling was held on 2 November at 12 booths. 17 Chairpersons, 118 divisions and 637 wards were already decided unopposed. MPTC / ZPTC polling is on 5 November, counting 7 November.",
+  textTe: "మంగళవారం, నవంబర్ 3 ఉదయం 8 నుంచి 138 కేంద్రాల్లో లెక్కింపు: ముందు పోస్టల్ బ్యాలెట్లు, తర్వాత వార్డులు, చివరగా చైర్‌పర్సన్ / మేయర్ ఓట్లు. తుది పోలింగ్ 60.96% (ఎస్‌ఈసీ). నవంబర్ 2న 12 బూత్‌లలో రీపోలింగ్ జరిగింది. 17 చైర్‌పర్సన్లు, 118 డివిజన్లు, 637 వార్డులు ఇప్పటికే ఏకగ్రీవం. ఎంపీటీసీ, జడ్పీటీసీ పోలింగ్ నవంబర్ 5, లెక్కింపు 7న.",
+  next: "Polling 1 Nov · counting 3 Nov",
+  src: [["ap7am (counting)", "https://www.ap7am.com/tn/885477/ap-municipal-elections-repolling-ends-counting-to-begin-tomorrow"], ["The South First (turnout)", "https://thesouthfirst.com/andhrapradesh/andhra-municipal-elections-60-96-percent-polling-recorded/"], ["Eenadu (re-poll)", "https://www.eenadu.net/breaking-news/426012664"], ["The Hans India", "https://www.thehansindia.com/andhra-pradesh/ap-municipal-elections-polling-reaches-4803-by-3pm-1138182"], ["Deccan Chronicle", "https://www.deccanchronicle.com/southern-states/andhra-pradesh/polling-today-in-92-urban-local-bodies-of-ap-from-7-am-to-5-pm-2000729"], ["The Hans India", "https://www.thehansindia.com/news/cities/amaravati/curtains-on-municipal-election-campaign-in-ap-1137602"], ["LiveLaw (SC order)", "https://www.livelaw.in/top-stories/supreme-court-andhra-pradesh-municipal-elections-ysrcp-plea-candidates-prevented-from-filing-nominations-sec-says-date-extended-556214"], ["hmtv (MPTC/ZPTC)", "https://www.hmtvlive.com/telugu-news/andhrapradesh/andhra-pradesh-mptc-zptc-elections-postponed-sec-announces-revised-schedule-nov-5-polling-205695"], ["ETV Bharat, 25 Oct", "https://www.etvbharat.com/te/state/some-nda-alliance-candidates-elected-unopposed-in-local-body-elections-2026-aps26102503853"], ["The South First", "https://thesouthfirst.com/andhrapradesh/andhra-local-body-polls-sec-reopens-nominations-in-72-wards-following-supreme-court-order"], ["Telugu Post", "https://www.telugupost.com/andhra-pradesh/state-election-commission-has-taken-key-decision-1624480"], ["ap7am", "https://www.ap7am.com/en/138128/andhra-pradesh-municipal-elections-polling-on-november-1-for-100-urban-local-bodies-sec-announces-schedule"]],
+};

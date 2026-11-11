@@ -1,0 +1,6 @@
+.DS_Store
+data/backups/
+*.tmp
+__pycache__/
+.claude-flow/
+/live/

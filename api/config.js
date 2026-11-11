@@ -1,0 +1,2 @@
+window.SUPABASE_URL="https://bnrdvcfkavmyqukbuozg.supabase.co";
+window.SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJucmR2Y2ZrYXZteXF1a2J1b3pnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTEwNDMyMzksImV4cCI6MjEwNjYxOTIzOX0.a7VtPQdrxmk6jgbnQ_ARSiEPZu3LIiZYr1wci7j9O3E";
