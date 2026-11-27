@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>పంచాయతీ నివేదికలు · Admin</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="gp-report.css?v=20261121103000" />
+</head>
+<body>
+<header class="gr-top"><a class="gr-brand" href="./"><img src="assets/brand/apresults-icon.svg" alt="" /><span><b>AP<i>·</i>results</b><small>అడ్మిన్ · పంచాయతీ నివేదికలు</small></span></a></header>
+<main class="gr ga">
+  <div id="gaMock" class="gr-mock" hidden>TEST MODE · localhost only · uses the reports saved in this browser by gp-report.html?mock</div>
+  <section id="gaLogin" class="gr-card ga-login" hidden>
+    <h1>అడ్మిన్ లాగిన్<span>Admin sign in</span></h1>
+    <label>ఇమెయిల్ <small>Email</small><input id="gaEmail" type="email" autocomplete="username" /></label>
+    <label>పాస్‌వర్డ్ <small>Password</small><input id="gaPass" type="password" autocomplete="current-password" /></label>
+    <p class="gr-err" id="gaLoginErr" hidden></p>
+    <button type="button" class="gr-go" id="gaSignIn">లాగిన్ · Sign in</button>
+  </section>
+
+  <section id="gaApp" hidden>
+    <h1>పంచాయతీ నివేదికలు<span id="gaCount">Follower reports</span></h1>
+    <div class="ga-bar">
+      <div class="seg" id="gaStatus"><button type="button" data-s="pending" aria-pressed="true">ఎదురుచూపు</button><button type="button" data-s="approved" aria-pressed="false">ఆమోదించినవి</button><button type="button" data-s="rejected" aria-pressed="false">తిరస్కరించినవి</button><button type="button" data-s="all" aria-pressed="false">అన్నీ</button></div>
+      <div class="seg" id="gaPhase"><button type="button" data-p="0" aria-pressed="true">అన్ని దశలు</button><button type="button" data-p="1" aria-pressed="false">1</button><button type="button" data-p="2" aria-pressed="false">2</button><button type="button" data-p="3" aria-pressed="false">3</button></div>
+      <input id="gaQ" type="search" placeholder="పంచాయతీ / మండలం / పేరు వెతకండి" />
+    </div>
+    <div class="ga-bar"><button type="button" class="ga-btn ok" id="gaBulk">ఎంచుకున్నవి ఆమోదించు</button><button type="button" class="ga-btn dark" id="gaAgree">2+ నివేదికలు ఒకేలా ఉన్నవి ఆమోదించు</button><button type="button" class="ga-btn" id="gaRefresh">రిఫ్రెష్</button><span class="ga-meta" id="gaWho"></span><button type="button" class="ga-btn" id="gaOut">లాగౌట్</button></div>
+    <div class="ga-list" id="gaList"></div>
+  </section>
+</main>
+<script src="supabase-config.js?v=20261103081429"></script>
+<script src="data/mandals.js?v=20261106234400"></script>
+<script src="gp-admin.js?v=20261121103000"></script>
+</body>
+</html>

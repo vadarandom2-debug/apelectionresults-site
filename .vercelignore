@@ -1,0 +1,6 @@
+# server.py and publish.sh are local tools. The admin page is deployed: it can only write
+# to Supabase after an admin signs in (see supabase/schema.sql).
+server.py
+publish.sh
+data/backups/
+supabase/

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>పంచాయతీ ఫలితాలు · Panchayat Live · AP 2026</title>
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="AP Panchayat Results 2026 Live · పంచాయతీ ఫలితాలు" />
+<meta property="og:description" content="Every gram panchayat in Andhra Pradesh lights up as its Sarpanch result is declared. 26 Nov, 29 Nov, 2 Dec." />
+<meta property="og:image" content="https://apelectionresults.com/assets/brand/og-panchayat.jpg?v=20261122" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://apelectionresults.com/assets/brand/og-panchayat.jpg?v=20261122" />
+<meta name="description" content="Every gram panchayat in Andhra Pradesh, lighting up as its result is declared: 13,000+ villages, three phases, one wall." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="panchayat.css?v=20261126200500" />
+</head>
+<body>
+
+<header class="pl-top">
+  <a class="pl-brand" href="./?home" aria-label="AP Election Results"><img src="assets/brand/apresults-icon.svg" alt="" /><span><b>AP<i>·</i>results</b><small>ఎన్నికల ఫలితాలు</small></span></a>
+  <a class="pl-home" href="./?home#/local">స్థానిక సంస్థల ఫలితాలు <small>Local bodies</small></a><span class="pl-live" id="plLive"><i></i><span id="plLiveT">LIVE</span></span>
+</header>
+
+<main class="pl">
+  <section class="pl-hero">
+    <p class="pl-eyebrow">ఆంధ్రప్రదేశ్ · గ్రామ పంచాయతీ ఎన్నికలు 2026</p>
+    <h1>పంచాయతీ <em>సమరం</em> <b class="pl-hph" id="plHPh"></b><span>Panchayat Samaram · live Sarpanch results</span></h1>
+    <p class="pl-lede">మీ పంచాయతీ పేరు వెతికి సర్పంచ్ ఫలితం చూడండి. <span>Search your village or mandal to see its Sarpanch result.</span></p>
+    <div class="pl-search"><input id="plLQ" type="search" placeholder="🔍 మీ పంచాయతీ / మండలం / సర్పంచ్ పేరు వెతకండి" autocomplete="off" aria-label="Search your panchayat" /></div>
+  <section class="pl-mapsec">
+    <h2>జిల్లాల మ్యాప్ <small>District map</small> <button type="button" id="plMapShare" class="pl-mapshare">🖼️ ఇమేజ్‌గా షేర్ <small>Share map (X · WhatsApp)</small></button></h2>
+    <div class="pl-views pl-mapmodes" id="plMapModes" role="tablist" aria-label="Map mode"><button type="button" data-m="lead" aria-pressed="true">ఆధిక్యం <small>Lead</small></button><button type="button" data-m="bubbles" aria-pressed="false">వృత్తాలు <small>Donuts</small></button><button type="button" data-m="progress" aria-pressed="false">పురోగతి <small>Progress</small></button><button type="button" data-m="phases" aria-pressed="false">దశలు <small>Phases</small></button></div>
+    <div id="plMap" class="pl-map"></div>
+    <div id="plMapSel" class="pl-mapsel" hidden></div>
+  </section>
+    <div class="pl-score" id="plScore"></div>
+    <div class="pl-phases" id="plPhases"></div>
+  </section>
+
+  <section class="pl-wallsec">
+    <div class="pl-views" role="tablist" aria-label="View"><button type="button" data-view="dist" aria-pressed="true">జిల్లా వారీ <small>By district</small></button><button type="button" data-view="list" aria-pressed="false">ఫలితాలు <small>Results</small></button></div>
+    <div class="pl-tools"><div class="pl-seg" id="plPhaseSeg" role="group" aria-label="Phase"></div></div>
+
+    <div id="plWallView" hidden style="display:none">
+      <div class="pl-tools"><div class="pl-seg" id="plPartySeg" role="group" aria-label="Side"></div><input id="plQ" type="search" placeholder="గ్రామం / మండలం వెతకండి · Find your village" aria-label="Search village" autocomplete="off" /></div>
+      <div class="pl-legend" id="plLegend"></div>
+      <div id="plEmpty" class="pl-empty" hidden></div>
+      <div id="plWall" class="pl-wall"></div>
+      <div id="plHits" class="pl-hits" hidden></div>
+      <section class="pl-cols">
+        <div><h2>జిల్లాల వారీ <small>District-wise</small></h2><div class="pl-tablewrap"><table class="pl-tbl" id="plTbl"></table></div></div>
+        <div><h2>తాజా ఫలితాలు <small>Just declared</small></h2><ol class="pl-latest" id="plLatest"></ol></div>
+      </section>
+    </div>
+
+    <div id="plDistView" hidden>
+      <p class="pl-note">సర్పంచ్ పేర్లు అందగానే ఇక్కడ అప్‌డేట్ చేస్తాం — సంఖ్యలు నిజమైనవి. <span>Names are added as soon as we receive them; the numbers are confirmed.</span></p>
+      <div id="plDist" class="pl-dist"></div>
+    </div>
+    <div id="plListView" hidden>
+      <p class="pl-note">సర్పంచ్ పేర్లు అందగానే అప్‌డేట్ చేస్తాం — సంఖ్యలు నిజమైనవి. <span>Names are added as soon as we receive them; the numbers are confirmed.</span></p>
+      <div class="pl-tools"><div class="pl-seg" id="plLSide" role="group" aria-label="Side"></div></div>
+      <p class="pl-lcount" id="plLCount"></p>
+      <div class="pl-tablewrap"><table class="pl-tbl pl-ltbl" id="plLTbl"></table></div>
+      <button type="button" class="pl-more" id="plLMore" hidden>మరిన్ని చూడండి · Show more</button>
+    </div>
+    <div id="plGraphView" hidden><div class="pg" id="plGraphs"></div></div>
+  </section>
+
+  <p class="pl-foot"><b>కూటమి = టీడీపీ + జనసేన + బీజేపీ</b> · Alliance (Kutami) = TDP + Janasena + BJP; YSRCP and others are shown separately. పంచాయతీ ఎన్నికలు పార్టీ గుర్తులపై జరగవు; ఇక్కడ రంగు అంటే ఆ సర్పంచ్ అభ్యర్థికి ఏ కూటమి మద్దతు ఉందో. <span>Panchayat polls are not fought on party symbols; colour shows the side that backed the winning Sarpanch candidate.</span></p>
+<style>.sup-bar{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:10px 14px;background:linear-gradient(90deg,#fff3c4,#ffe08a);border-top:2px solid #d4a000;margin-top:24px;text-decoration:none;color:#111827;font:800 16px/1.3 "Anek Telugu","Inter Tight",sans-serif;text-align:center}.sup-bar span{font-size:22px}.sup-bar u{text-decoration:none;background:#111827;color:#f2c94c;border-radius:99px;padding:6px 16px;font:800 14px "Inter Tight",sans-serif;white-space:nowrap}.sup-bar:hover u{background:#000}@media(max-width:560px){.sup-bar{font-size:14.5px;gap:8px}}</style>
+<a class="sup-bar" href="https://buymeacoffee.com/shivudu" target="_blank" rel="noopener"><span>☕</span><b>This site is free · If you like it, support us with a coffee</b><u>Buy me a coffee →</u></a>
+
+</main>
+
+<aside class="pl-card" id="plCard" hidden></aside>
+<div class="pl-tip" id="plTip" hidden></div>
+<script src="data/mandals.js?v=20261106234400"></script>
+<script src="panchayat.js?v=20261126233500"></script>
+<script src="panchayat-map.js?v=20261126180000"></script>
+<script src="panchayat-share.js?v=20261126170000"></script>
+</body>
+</html>

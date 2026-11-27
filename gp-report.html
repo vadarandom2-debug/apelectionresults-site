@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="te">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>పంచాయతీ ఫలితం పంపండి · Send a panchayat result</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="gp-report.css?v=20261122190000" />
+</head>
+<body>
+<header class="gr-top"><a class="gr-brand" href="./"><img src="assets/brand/apresults-icon.svg" alt="" /><span><b>AP<i>·</i>results</b><small>ఎన్నికల ఫలితాలు</small></span></a></header>
+<main class="gr">
+  <h1>పంచాయతీ ఫలితం పంపండి<span>Send a panchayat result</span></h1>
+  <p class="gr-lede">మీ గ్రామ పంచాయతీలో ఎవరు గెలిచారో, మెజారిటీ ఎంతో పంపండి. అడ్మిన్ ధృవీకరించిన తర్వాతే పంచాయతీ ఫలితాల గోడపై కనిపిస్తుంది. <span>Admin approves every report before it appears on the Panchayat Wall.</span></p>
+
+  <form id="grForm" class="gr-card" novalidate autocomplete="off">
+    <div class="gr-row two">
+      <label>దశ <small>Phase</small><select id="grPhase"><option value="1">1 · 26 నవంబర్</option><option value="2">2 · 29 నవంబర్</option><option value="3">3 · 2 డిసెంబర్</option></select></label>
+    </div>
+
+    <label>జిల్లా <small>District</small><select id="grDist" required></select></label>
+    <label>మండలం <small>Mandal</small><select id="grMandal" required></select></label>
+    <p class="gr-err" id="grShut" hidden></p>
+    <label>పంచాయతీ <small>Panchayat (village)</small><select id="grPanchSel"></select></label>
+    <label id="grPanchTxt" hidden>పంచాయతీ పేరు <small>Type the name</small><input id="grPanch" type="text" placeholder="గ్రామం పేరు రాయండి" /></label>
+
+    <fieldset class="gr-side"><legend>ఎవరు గెలిచారు? <small>Who won the Sarpanch post?</small></legend>
+      <div class="gr-opts">
+        <label class="opt k"><input type="radio" name="side" value="K" required /><span><b>కూటమి</b><small>TDP · జనసేన · BJP మద్దతు</small></span></label>
+        <label class="opt y"><input type="radio" name="side" value="Y" /><span><b>వైసీపీ</b><small>YSRCP మద్దతు</small></span></label>
+        <label class="opt o"><input type="radio" name="side" value="O" /><span><b>ఇతరులు</b><small>స్వతంత్రులు · ఇతర పార్టీలు</small></span></label>
+      </div>
+    </fieldset>
+
+    <div class="gr-row two">
+      <label>గెలిచిన సర్పంచ్ పేరు <small>Winner's name</small><input id="grWinner" type="text" placeholder="పేరు" /></label>
+      <label>మెజారిటీ (ఓట్లు) <small>Majority</small><input id="grMargin" type="number" inputmode="numeric" min="0" max="200000" placeholder="ఉదా. 125" /></label>
+    </div>
+    <label class="gr-check"><input id="grUnop" type="checkbox" /> ఏకగ్రీవం (పోటీ లేకుండా ఎన్నికయ్యారు) <small>Unopposed</small></label>
+    <label>గమనిక <small>Note (optional)</small><textarea id="grNotes" rows="2" maxlength="500" placeholder="ఉదా. రీకౌంటింగ్ జరుగుతోంది"></textarea></label>
+
+    <div class="gr-row two">
+      <label>మీ పేరు <small>Your name</small><input id="grName" type="text" required placeholder="పేరు" /></label>
+      <label>ఫోన్ <small>Phone (for verification only)</small><input id="grPhone" type="tel" inputmode="tel" required placeholder="10 అంకెలు" /></label>
+    </div>
+    <input id="grWeb" name="website" type="text" tabindex="-1" autocomplete="off" class="gr-hp" aria-hidden="true" />
+
+    <p class="gr-err" id="grErr" hidden></p>
+    <button type="submit" class="gr-go" id="grGo">ఫలితం పంపండి · Send</button>
+    <p class="gr-fine">మీ పేరు, ఫోన్ ధృవీకరణ కోసం మాత్రమే — ప్రజలకు కనిపించవు. తప్పుడు సమాచారం పంపవద్దు.</p>
+  </form>
+
+  <div class="gr-card gr-done" id="grDone" hidden></div>
+</main>
+<script src="supabase-config.js?v=20261103081429"></script>
+<script src="data/mandals.js?v=20261106234400"></script>
+<script src="gp-report.js?v=20261126130000"></script>
+</body>
+</html>

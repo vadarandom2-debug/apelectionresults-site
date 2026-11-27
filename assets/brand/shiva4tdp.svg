@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="@shiva4tdp">
+  <title>@shiva4tdp</title>
+  <!-- badge -->
+  <rect x="6" y="6" width="128" height="128" rx="30" fill="#111827"/>
+  <rect x="16" y="16" width="108" height="108" rx="22" fill="#F5C400"/>
+  <text x="70" y="101" text-anchor="middle" font-family="Inter Tight, Arial Black, Arial, sans-serif" font-weight="900" font-size="84" fill="#111827">S</text>
+  <circle cx="104" cy="104" r="22" fill="#C4122F" stroke="#F5C400" stroke-width="5"/>
+  <path d="M94 104 l7 7 l13 -15" fill="none" stroke="#fff" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- wordmark -->
+  <text x="160" y="80" font-family="Inter Tight, Arial Black, Arial, sans-serif" font-weight="900" font-size="58" fill="#111827" letter-spacing="-1.5">@shiva<tspan fill="#C99A00">4</tspan>tdp</text>
+  <text x="162" y="114" font-family="Inter Tight, Arial, sans-serif" font-weight="600" font-size="22" fill="#5b6475" letter-spacing="3">AP ELECTION UPDATES</text>
+</svg>
